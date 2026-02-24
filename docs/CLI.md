@@ -6,9 +6,9 @@ Complete reference for the `learning` command-line tool.
 
 ```bash
 cd packages/cli
-npm install
-npm run build
-npm link
+bun install
+bun run build
+bun link
 ```
 
 Or use the master installer from the repository root:

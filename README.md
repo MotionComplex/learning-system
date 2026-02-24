@@ -15,8 +15,14 @@ A complete learning system that works across multiple AI platforms (Cursor, VS C
 
 ### Installation
 
+**Prerequisites**: [Bun](https://bun.sh/) must be installed.
+
 ```bash
-git clone https://github.com/yourusername/learning-system
+# Install Bun if you haven't already
+curl -fsSL https://bun.sh/install | bash
+
+# Clone and install
+git clone https://github.com/MotionComplex/learning-system
 cd learning-system
 ./install.sh
 ```
@@ -103,7 +109,7 @@ Beautiful React app for testing your knowledge.
 
 ```bash
 cd packages/quiz-app
-npm run dev
+bun dev
 # Visit http://localhost:5173
 ```
 
@@ -230,23 +236,23 @@ learning-system/
 
 ```bash
 cd packages/cli
-npm install
-npm run build
-npm link
+bun install
+bun run build
+bun link
 ```
 
 ### Running the Quiz App in Development
 
 ```bash
 cd packages/quiz-app
-npm install
-npm run dev
+bun install
+bun dev
 ```
 
 ### Running Tests
 
 ```bash
-npm test
+bun test
 ```
 
 ## Documentation

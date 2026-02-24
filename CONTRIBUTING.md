@@ -16,9 +16,9 @@ Be respectful, constructive, and collaborative. We're all here to build better l
    ```
 3. Install dependencies:
    ```bash
-   npm install
-   cd packages/cli && npm install
-   cd ../quiz-app && npm install
+   bun install
+   cd packages/cli && bun install
+   cd ../quiz-app && bun install
    ```
 4. Create a branch:
    ```bash
@@ -31,9 +31,9 @@ Be respectful, constructive, and collaborative. We're all here to build better l
 
 ```bash
 cd packages/cli
-npm install
-npm run build
-npm link
+bun install
+bun run build
+bun link
 ```
 
 Test your changes:
@@ -47,8 +47,8 @@ learning add
 
 ```bash
 cd packages/quiz-app
-npm install
-npm run dev
+bun install
+bun dev
 ```
 
 Visit http://localhost:5173

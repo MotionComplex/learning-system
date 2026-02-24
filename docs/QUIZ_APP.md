@@ -6,8 +6,8 @@ Beautiful React-based quiz application for testing your knowledge.
 
 ```bash
 cd packages/quiz-app
-npm install
-npm run dev
+bun install
+bun dev
 ```
 
 Visit http://localhost:5173
