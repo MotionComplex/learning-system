@@ -13,7 +13,7 @@
     "uninstall-all": "./uninstall.sh"
   },
   "devDependencies": {
-    "@types/bun": "latest",
+    "bun-types": "latest",
     "typescript": "^5.0.0"
   },
   "description": "Universal learning system with CLI tool, Cursor integration, VS Code Copilot integration, and web quiz app",

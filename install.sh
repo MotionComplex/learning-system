@@ -12,22 +12,26 @@ GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Check if Node.js is installed
-if ! command -v node &> /dev/null; then
-  echo -e "${RED}Error: Node.js is not installed${NC}"
-  echo "Please install Node.js from https://nodejs.org/"
+# Check if Bun is installed
+if ! command -v bun &> /dev/null; then
+  echo -e "${RED}Error: Bun is not installed${NC}"
+  echo "Please install Bun from https://bun.sh/"
+  echo ""
+  echo "Quick install:"
+  echo "  curl -fsSL https://bun.sh/install | bash"
+  echo ""
   exit 1
 fi
 
-echo -e "${BLUE}Node.js version:${NC} $(node --version)"
+echo -e "${BLUE}Bun version:${NC} $(bun --version)"
 echo ""
 
 # Step 1: Install CLI globally
 echo -e "${BLUE}[1/4] Installing CLI tool...${NC}"
 cd packages/cli
-npm install
-npm run build || tsc
-npm link
+bun install
+bun run build
+bun link
 cd ../..
 echo -e "${GREEN}✓ CLI tool installed${NC}"
 echo ""
@@ -71,7 +75,7 @@ echo ""
 # Step 5: Install quiz app dependencies
 echo -e "${BLUE}Installing quiz app dependencies...${NC}"
 cd packages/quiz-app
-npm install
+bun install
 cd ../..
 echo -e "${GREEN}✓ Quiz app ready${NC}"
 echo ""
@@ -92,7 +96,7 @@ echo "3. Take a quiz:"
 echo "   ${BLUE}learning quiz${NC}"
 echo ""
 echo "4. Start the quiz web app:"
-echo "   ${BLUE}cd packages/quiz-app && npm run dev${NC}"
+echo "   ${BLUE}cd packages/quiz-app && bun dev${NC}"
 echo ""
 echo "5. View all commands:"
 echo "   ${BLUE}learning --help${NC}"

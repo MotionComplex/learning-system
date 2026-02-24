@@ -7,10 +7,10 @@
     "learning": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "node --loader ts-node/esm src/index.ts",
-    "link": "npm link",
-    "unlink": "npm unlink -g @learning-system/cli"
+    "build": "bun build src/index.ts --outdir dist --target bun --format esm",
+    "dev": "bun run src/index.ts",
+    "link": "bun link",
+    "unlink": "bun unlink"
   },
   "dependencies": {
     "commander": "^12.0.0",
@@ -22,8 +22,8 @@
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/inquirer": "^9.0.7",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.2"
+    "bun-types": "latest",
+    "typescript": "^5.0.0"
   },
   "keywords": ["learning", "cli", "knowledge"],
   "author": "",

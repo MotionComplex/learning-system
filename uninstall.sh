@@ -26,7 +26,7 @@ echo ""
 
 # Step 1: Unlink CLI tool
 echo -e "${BLUE}[1/3] Removing CLI tool...${NC}"
-npm unlink -g @learning-system/cli 2>/dev/null || echo "CLI not linked globally"
+bun unlink @learning-system/cli 2>/dev/null || echo "CLI not linked globally"
 echo -e "${GREEN}✓ CLI tool removed${NC}"
 echo ""
 
