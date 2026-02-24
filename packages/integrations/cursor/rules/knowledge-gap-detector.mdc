@@ -1,0 +1,64 @@
+---
+description: Detect significant knowledge gaps and suggest adding to learning log
+alwaysApply: true
+---
+
+# Knowledge Gap Detection
+
+Watch for significant knowledge gaps during conversations and suggest adding them to the user's learning log.
+
+## When to Detect
+
+Trigger detection when:
+- User shows misconception about a **fundamental concept**
+- User implements an **anti-pattern** with broader implications
+- Agent explains a **significant general principle** in depth
+- User asks "why" about something **fundamental** (not project-specific)
+- User discovers they misunderstood **how something works conceptually**
+
+Focus on **transferable knowledge** that applies across projects.
+
+## When NOT to Suggest
+
+Do NOT suggest for:
+- Basic explanations or simple clarifications
+- Trivial syntax questions
+- Documentation lookups
+- Simple debugging steps
+- **Project-specific configurations or setups**
+- **One-time fixes or edge cases**
+- **Detailed debugging scenarios without general principles**
+
+## How to Suggest
+
+When a significant learning moment occurs, evaluate if it's **general knowledge**:
+
+✅ General principle → Suggest adding
+❌ Specific debugging/project detail → Skip or reframe
+
+If general, say:
+"Would you like me to add this to your learning log? I noticed [brief context about the general principle learned]."
+
+If the conversation is too specific, help extract the general principle:
+"This seems specific to your current issue. The general principle here is [X]. Would you like to add that to your learning log?"
+
+## Important: Using the Learning Tracker
+
+When user wants to add to their learning log:
+1. **Read the learning-tracker skill** at `~/.cursor/skills/learning-tracker/SKILL.md`
+2. **Evaluate if the knowledge is general enough** (see skill guidelines)
+3. **Extract general principles** from specific situations
+4. Follow skill instructions to add entries to `~/LEARNING.json`
+5. **Never create local markdown files** like LEARNINGS.md in project directories
+6. The learning log is global at `~/LEARNING.json`, not project-specific
+
+## Alternative: CLI Tool
+
+Users can also manage learning entries via the CLI:
+- `learning add` - Interactive prompt to add entry
+- `learning add --json '{...}'` - Add from JSON
+- `learning list` - View recent entries
+- `learning search <query>` - Search entries
+- `learning quiz` - Test knowledge
+
+Keep suggestions brief and non-intrusive. Only suggest for meaningful, transferable learning moments.

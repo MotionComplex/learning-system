@@ -1,0 +1,17 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "When I learn something significant during our conversation, help me add it to my learning log using: learning add"
+    },
+    {
+      "text": "Focus on detecting general principles and fundamental concepts, not project-specific debugging notes"
+    },
+    {
+      "text": "Help extract transferable knowledge that applies across projects"
+    },
+    {
+      "text": "Only suggest adding learnings for meaningful educational moments, not trivial questions"
+    }
+  ],
+  "github.copilot.chat.instructions": "I maintain a personal learning log at ~/LEARNING.json to track coding concepts and principles I learn. Watch for significant learning moments during our conversations - especially when I learn fundamental concepts, correct misconceptions, or discover general principles. Suggest adding these to my learning log using the 'learning add' CLI command, but only for general, transferable knowledge (not project-specific debugging notes). Help me extract the general principle from specific situations when needed."
+}

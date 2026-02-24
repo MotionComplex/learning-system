@@ -1,0 +1,23 @@
+{
+  "name": "universal-learning-system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "bun run --filter '*' build",
+    "dev": "bun run --filter '*' dev",
+    "test": "bun test",
+    "install-all": "./install.sh",
+    "uninstall-all": "./uninstall.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  },
+  "description": "Universal learning system with CLI tool, Cursor integration, VS Code Copilot integration, and web quiz app",
+  "keywords": ["learning", "cli", "cursor", "vscode", "quiz"],
+  "author": "",
+  "license": "MIT"
+}
